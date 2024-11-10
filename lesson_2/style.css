@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 60px;
+            margin-right: 10px;
+        }
+    }
+    .search-bar{
+        display: flex;
+        flex: 1;
+        margin: 0 20px;
+        max-width: 500px;
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+        button {
+            background-color: #00c0d7;
+            border: none;
+            padding: 8px 12px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: #008b9a;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: gray;
+            transform: scale(0.95);
+        }
+    }
+
+    .user-section{
+        display: flex;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        .currency{
+            margin-right: 15px;
+        }
+        .user-icon-button {
+            background-color: #f8f8f8;
+            border: none;
+            color: #00c0d7;
+            font-size: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s; /* Плавный переход */
+        }
+        .user-icon-button:hover {color: gray;}
+        .user-icon-button:active {
+            transform: scale(0.95); /* Легкий эффект нажатия */
+            color: gray;
+        }
+    }
+
+}
