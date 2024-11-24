@@ -1,6 +1,6 @@
 const base_url = "https://duishobaevislam01.up.railway.app/api/v1/";
 const end_point = {
-    tales: "tales/"
+    tales: "chat/"
 };
 
 const form = document.querySelector('#storyForm');
@@ -55,7 +55,7 @@ async function create_tales(new_tales) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const new_tales = {
-        topic: text.value,
+        topic: `вопрос`,
         user:5,
     };
     console.log(new_tales);
