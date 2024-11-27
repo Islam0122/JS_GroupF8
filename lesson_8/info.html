@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recipe Page</title>
+	<link rel="stylesheet" href="/lesson_8/css/style.css">
+</head>
+<body class="container">
+<header class="header">
+	<div class="logo">
+		<img src="media/icons/logo.svg" alt="Cooks Delight Logo">
+		<span>Cooks Delight</span>
+	</div>
+	<nav>
+		<a href="#" class="active">HOME</a>
+		<a href="#">RECIPES</a>
+		<a href="#">API</a>
+	</nav>
+	<div class="actions">
+		<div class="search-icon">
+			<img src="media/icons/search.svg">
+		</div>
+		<button class="subscribe-button">SUBSCRIBE</button>
+	</div>
+</header>
+
+<div class="recipe-container">
+	<!-- Заголовок -->
+	<div class="first">
+		<h5>recipe</h5>
+	</div>
+	<header class="recipe-header">
+	</header>
+	<!-- Изображение блюда -->
+	<div class="recipe-image"> </div>
+
+	<!-- Контент рецепта -->
+	<div class="recipe-main">
+		<section class="recipe-content">
+			<h2>INSTRUCTIONS</h2>
+			<div class="recipe_instructions">
+
+			</div>
+
+			<!-- Дополнительное изображение/видео -->
+			<div class="recipe-video">
+			</div>
+		</section>
+		<section class="recipe-details">
+			<div class="ingredients">
+				<h3>INGREDIENTS</h3>
+				<ul class="ingredients_ul">
+
+				</ul>
+			</div>
+			<div class="measures">
+				<h3>MEASURES</h3>
+				<ul class="measures_ul">
+				</ul>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+<footer>
+	<div class="footer-content">
+		<div class="footer-logo">
+			<img src="media/icons/foter_logo.svg" alt="Cooks Delight Logo">
+			<span>Cooks Delight</span>
+		</div>
+		<div class="footer-links">
+			<a href="#">HOME</a>
+			<a href="#">RECIPES API</a>
+		</div>
+		<div class="social-icons">
+			<img src="media/icons/tiltok.svg" alt="">
+		</div>
+	</div>
+	<hr>
+	<div class="copyright">
+		COPYRIGHT © 2024 OKURMEN.
+	</div>
+</footer>
+<script>
+    const img = document.querySelector('.recipe-image');
+    const h1 = document.querySelector('.recipe-header');
+    const p =document.querySelector('.recipe_instructions')
+	const recipe_video =document.querySelector('.recipe-video')
+	const ingredients_ul = document.querySelector('.ingredients_ul')
+    const measures_ul = document.querySelector('.measures_ul')
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    if (id) {
+        console.log(id);
+        fetchInfo()
+    }
+
+    async function fetchInfo() {
+        const url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id
+        const response = await fetch(url)
+        const {meals} = await response.json()
+        console.log(meals)
+        if (meals === null) {
+            content.innerHTML = 'Food Not Found'
+        }
+        renderContent(meals[0])
+    }
+
+    function renderContent(food) {
+        h1.innerHTML = ''
+		h1.innerHTML = `<h1>${food.strMeal}</h1>`
+		img.innerHTML =''
+		img.innerHTML = `<img src="${food.strMealThumb}" alt="${food.strMeal}">`
+		p.innerHTML = ''
+		p.innerHTML = `<p>${food.strInstructions}</p>`
+		recipe_video.innerHTML =''
+        recipe_video.innerHTML = `<iframe  src="https://www.youtube.com/embed/${food.strYoutube.split('v=')[1]}" frameborder="0" allowfullscreen></iframe>`;
+        ingredients_ul.innerHTML = '';
+        measures_ul.innerHTML = '';
+
+        // Перебираем ингредиенты и добавляем их в список
+        for (let i = 1; i <= 20; i++) {
+            const ingredient = food[`strIngredient${i}`];
+            const measure = food[`strMeasure${i}`];
+
+            // Проверяем, есть ли ingredient и он не пустой
+            if (ingredient && ingredient.trim() !== '') {
+                // Добавляем ингредиент в список
+                const li = document.createElement('li');
+                li.textContent = `${ingredient.trim()}`;
+                ingredients_ul.appendChild(li);
+            }
+
+            // Проверяем, есть ли мера и она не пустая
+            if (measure && measure.trim() !== '') {
+                // Добавляем меру в список
+                const li = document.createElement('li');
+                li.textContent = `${measure.trim()}`;
+                measures_ul.appendChild(li);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
