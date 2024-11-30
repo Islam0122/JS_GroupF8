@@ -1,6 +1,5 @@
 const end_point = {
     getMealsByCategory: "",
-    g
 }
 
 class Service {
