@@ -11,7 +11,7 @@ body {
     width: 1312px;
     margin: 0 auto;
 }
-.header {
+header {
     margin-top: 16px;
     padding: 16px 24px;
     border-radius: 32px;
@@ -99,7 +99,7 @@ body {
 }
 .first_section {
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.5) url('../media/images/img.png') no-repeat center center;
+    background: rgba(0, 0, 0, 0.5) url('img.png') no-repeat center center;
     width: 1312px;
     height: 577px;
     border-radius: 32px;
@@ -249,141 +249,94 @@ body {
     }
 
 }
-.journey-menu {
-    max-width: 1000px;
-    margin: 50px auto;
+.journey-buttons-menu {
     text-align: center;
-    padding: 30px;
-}
-
-
-.journey-menu h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.journey-menu p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 40px;
-    margin-top: 12px;
-}
-
-
-.journey-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 40px;
-}
-
-.journey-buttons button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #333;
-    background: #f1f1f1;
-    border: 2px solid #ddd;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.journey-buttons button:hover {
-    background:greenyellow;
-    color: #fff;
-    border-color: greenyellow;
-}
-
-
-.journey-buttons button.active {
-    background: white;
-    color: #fff;
-    border-color: white;
-}
-
-
-.j-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-    margin-bottom: 24px;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
-}
-
-
-.j-cards div {
-    background: whitesmoke;
-
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.j-cards div:hover {
-    transform: translateY(-5px);
-}
-
-
-.j-cards div img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-}
-
-
-.j-cards div .card-content {
     padding: 20px;
-    text-align: left;
-    color: black;
-}
 
-.j-cards div h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
+    h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
 
-.j-cards div p {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-}
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
 
-.hour {
-    font-size: 10px !important;
-    margin-bottom: -31px!important;
-    margin-right: 50px !important;
-}
+    .journey-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
 
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #f49e2d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
 
+            &:hover {
+                background-color: #d67e1d;
+            }
+        }
+    }
 
-.j-cards div button {
-    margin-left: 167px;
-    margin-bottom: 16px;
-    width:132px;
-    height: 38px;
-    padding: 10px;
-    font-size: 1rem;
-    color: black;
-    border: 1px solid black;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
+    .j-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
 
-.j-cards div button:hover {
-    background: wheat;
-}
+        .j-card {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .j-card-img {
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+
+            .j-card-content {
+                padding: 15px;
+
+                h3 {
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                }
+
+                button {
+                    padding: 10px 20px;
+                    background-color: #f49e2d;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 1em;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background-color: #d67e1d;
+                    }
+                }
+            }
+        }
+    }}
 footer {
     background-color: #222; /* Цвет фона футера */
     color: #fff; /* Цвет текста */
@@ -440,149 +393,5 @@ footer {
         font-size: 12px;
         font-weight: 500;
         line-height: 14.4px;
-    }
-}
-
-.recipe-container {
-    width: 1312px;
-    margin: 0 auto;
-    background-color: #fdfbf8;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-    .first{
-        width:93px ;
-        height: 34px;
-        padding: 8px 16px ;
-        border-radius: 16px ;
-        background: rgba(238, 99, 82, 1);
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 12px;
-        h5{
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 18px;
-            color: rgba(255, 251, 242, 1);
-            text-align: center;
-            text-transform: uppercase;
-        }
-    }
-    .recipe-header {
-        text-align: center;
-        margin-bottom: 20px;
-
-        h1 {
-            font-family: Montserrat, serif;
-            font-size: 80px;
-            font-weight: 800;
-            line-height: 80px;
-            letter-spacing: -0.01em;
-            text-align: center;
-            color: rgba(38, 37, 34, 1);
-            text-transform: uppercase;
-        }
-    }
-    .recipe-image {
-        text-align: center;
-        img {
-        width: 1232px;
-        height: 640px;
-        object-fit: cover;
-        border-radius: 24px;
-    }}
-    .recipe_instructions p{
-        margin-top: 16px;
-        width: 560px;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 22.4px;
-        letter-spacing: 0.01em;
-        color: rgba(51, 51, 51, 0.8);
-    ;
-
-    }
-
-
-    .recipe-main {
-        align-items: center;
-        margin-top: 40px;
-        margin-left: 111px;
-        display: flex;
-        gap: 56px;
-        .recipe-content{
-            h2{
-                font-size: 40px;
-                font-weight: 700;
-                line-height: 40px;
-                letter-spacing: 0.01em;
-                color:rgba(51, 51, 51, 1);
-            }
-            .recipe-video iframe{
-                margin-top: 40px;
-                width: 645px;
-                height: 480px;
-                border-radius: 24px ;
-                border: 1px;
-            }
-        }
-        .recipe-details{
-            .ingredients {
-                width: 428px;
-                border-radius: 24px ;
-                border: 1px ;
-                background: rgba(255, 251, 242, 1);
-                margin-bottom: 16px;
-                padding: 16px;
-                border: 1px solid rgba(38, 37, 34, 0.24);
-
-                h3{
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 18px;
-                    letter-spacing: 0.02em;
-                    color: rgba(238, 99, 82, 1);
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
-                }
-                li{
-                    margin: 16px;
-                    font-size: 21px;
-                    font-weight: 400;
-                    color: rgba(38, 37, 34, 1);
-                }
-            }
-            .measures{
-                width: 428px;
-                border-radius: 24px ;
-                border: 1px ;
-                background: rgba(255, 251, 242, 1);
-                margin-bottom: 16px;
-                padding: 16px;
-                border: 1px solid rgba(38, 37, 34, 0.24);
-
-                h3{
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 18px;
-                    letter-spacing: 0.02em;
-                    color: rgba(238, 99, 82, 1);
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
-
-                }
-                li{
-                    margin: 16px;
-                    font-size: 21px;
-                    font-weight: 400;
-                    color: rgba(38, 37, 34, 1);
-                }
-            }
-        }
-
-
     }
 }
