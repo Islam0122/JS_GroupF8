@@ -42,5 +42,5 @@ function renderCard(item) {
   </div>`
 }
 function openInfo(id) {
-    window.location.href = '/JS_GroupF8/lesson_8/info.html?id=' + id;
+    window.location.href = '/JS_GroupF8/lesson_8/login.html?id=' + id;
 }
