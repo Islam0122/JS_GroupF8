@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.cold {
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnYzM3M0NWI2MTh5cTMzOXI2MDNheHU1OWl2dnNhZDJqdDBsMjJwNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/s4Bi420mMDRBK/giphy.gif'); /* Убедитесь, что путь к изображению корректен */
+    background-size: cover;
+    background-position: center;
+}
+.warm {
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWp1MGtqODJpdWxjYTZ4dHJ2N3M0MzNpYXRlMGRzdWsxNTV6ZW84ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26u6dryuZH98z5KuY/giphy.gif'); /* Убедитесь, что путь к изображению корректен */
+    background-size: cover;
+    background-position: center;
+}
+.hot {
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGxmaGozZDVwNXFwYjF2d3hzNWxxMTVxanlwMHMxdmZkaTZlNmxvbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BREnyYXsPOxlUKk/giphy.gif');
+    background-size: cover;
+    background-position: center;
+}
+body {
+    font-family: Roboto, serif;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWp1MGtqODJpdWxjYTZ4dHJ2N3M0MzNpYXRlMGRzdWsxNTV6ZW84ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26u6dryuZH98z5KuY/giphy.gif'); /* Убедитесь, что путь к изображению корректен */
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+
+
+}
+.info {
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 553px;
+    margin-left: 116px;
+    text-align: center;
+    align-items: center;
+    margin-right: 285px;
+    .country_degree{
+        width: 192px;
+        height: 168px;
+        font-size: 143px;
+        font-weight: 400;
+        line-height: 167.58px;
+        letter-spacing: -0.08em;
+        margin-right: 10px ;
+    }
+    div .country {
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 70.31px;
+        width: 227px;
+        height: 72px;
+        }
+    div .country_info {
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+    .cloudy_icon {
+        width: 70px;
+        height: 70px;
+        top: 617px;
+        left: 559px;
+        margin-right: 285px;
+
+    }
+}
+.detail{
+    width: 526px;
+    height: 100%;
+    padding: 40px 35px;
+    backdrop-filter: blur(19px);
+    text-align: center;
+    border-left: 5px solid rgba(255, 255, 255, 0.14);
+    justify-content: right;
+
+    .search-bar{
+        background: none;
+        border: none;
+        input{
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23.44px;
+            border: none;
+            outline: none;
+            margin-right: 166px;
+            text-align: left;
+            background-color: transparent;
+            margin-bottom: 13px;
+        }
+        button{
+            background: none;
+            border: none;
+        }
+        hr{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .weather-details{
+        h2{
+            width: 127px;
+            height: 21px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.09px;
+            text-align: left;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 54px;
+            margin-top: 41px;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.09px;
+            text-align: left;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 30px;
+
+        }
+        .detail-row {
+            display: flex;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21.09px;
+            align-items: center;
+            margin-bottom: 10px; /* Расстояние между строками */
+            padding: 5px 0; /* Внутренний отступ */
+        }
+
+        .detail-row span {
+            display: flex;
+            align-items: center;
+
+        }
+        .detail-row span:first-child{
+            color: rgba(255, 255, 255, 0.7);
+            margin-right: 262px;
+        }
+        .detail-row span:last-child ,.temp-max , .humidity ,.temp-min,.wind-speed,.cloudy{
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .detail-row i {
+            margin-left: 26px;
+            color: white;
+        }
+        hr{
+            margin-top: 66px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 228px;
+        }
+
+    }
+}

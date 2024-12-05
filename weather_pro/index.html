@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+<div class="container">
+	<div class="info" >
+		<h1 class = "country_degree">16°</h1>
+		<div>
+			<p class="country">London</p>
+			<p class="country_info" >06:09 - Monday, 9 Sep '23</p>
+		</div>
+		    <p><img src="./media/icons/cloudy.svg" alt="Cloudy"></p>
+	</div>
+	<div class="detail">
+		<form class="search-bar">
+			<input type="text" class="searchInput" placeholder="Search Location...">
+			<button type="submit"><img src="media/icons/search.svg" alt="Search"></button>
+			<hr>
+		</form>
+		<div class="weather-details">
+			<h2>Weather Details</h2>
+			<h3>THUNDERSTORM WITH LIGHT DRIZZLE</h3>
+			<div class="detail-row">
+				<span>Temp max</span>
+				<span class="temp-max">19° </span>
+				<i style="color: rgba(223, 161, 161, 1);" class="fas fa-temperature-high"></i>
+			</div>
+			<div class="detail-row">
+				<span>Temp min</span>
+				<span class="temp-min">15°</span>
+				<i style="color: rgba(109, 151, 202, 1);" class="fas fa-temperature-low"></i>
+			</div>
+			<div class="detail-row">
+				<span>Humidity</span>
+				<span class="humidity">58% </span>
+				<i class="fas fa-tint"></i>
+			</div>
+			<div class="detail-row">
+				<span>Cloudy</span>
+				<span class="cloudy">86% </span>
+				<i class="fas fa-cloud"></i>
+			</div>
+			<div class="detail-row">
+				<span>Wind</span>
+				<span class="wind-speed">5 km/h </span>
+				<i class="fas fa-wind"></i>
+			</div>
+			<hr>
+		</div>
+
+	</div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
